@@ -42,7 +42,7 @@ router.route("/:id").delete((req, res) => {
 //update exercise
 //localhost:5000/exercises/update/id
 router.route("/update/:id").post((req, res) => {
-  Exercise.findById(req.param.id)
+  Exercise.findById(req.params.id)
     .then(exercise => {
       exercise.username = req.body.username;
       exercise.description = req.body.description;
